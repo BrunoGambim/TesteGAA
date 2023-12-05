@@ -1,3 +1,3 @@
 package testegaa
 
-const msg = "v1"
+const MSG = "v1"
