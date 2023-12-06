@@ -2,7 +2,7 @@ package testegaa
 
 import "fmt"
 
-const MSG = "v16"
+const MSG = "v17"
 
 func PrintMS() {
 	fmt.Println(MSG)
