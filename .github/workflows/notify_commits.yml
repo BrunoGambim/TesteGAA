@@ -23,4 +23,4 @@ jobs:
       id: req
     - run: echo "${{ steps.req.GIT_MESSAGE }}"
     - if: ${{ steps.req.GIT_MESSAGE }} == ''
-      run: echo "OK!"
+      run: echo "${{ steps.req.GIT_MESSAGE }}"
