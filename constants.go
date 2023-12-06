@@ -4,6 +4,6 @@ import "fmt"
 
 const MSG = "v16"
 
-func PrintMSG() {
+func PrintMS() {
 	fmt.Println(MSG)
 }
