@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-            curl -L \
+          curl -L \
             -X POST \
             -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}"\
             -H "Accept: application/vnd.github+json" \
