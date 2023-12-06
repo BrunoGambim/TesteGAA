@@ -19,8 +19,8 @@ jobs:
             -H "Accept: application/vnd.github+json" \
             https://api.github.com/repos/BrunoGambim/TesteGAB/actions/workflows/update_dependencies.yml/dispatches \
             -d '{"ref":"bump/update-jarbas-commons","inputs":{"commit":"${{ github.sha }}"}}' > $HOME/res.json
-            echo "GIT_MESSAGE=$(jq -r '.message' $HOME/res.json)" >> $GITHUB_ENV
+            echo "GIT_MESSAGE=$(jq -r '.message' $HOME/res.json)" >> $GITHUB_OUTPUT
       id: req
-    - run: echo "${{ steps.req }}"
+    - run: echo "${{ steps.req.env }}"
     - if: ${{ steps.req.GIT_MESSAGE }} == ''
-      run: echo "${{ steps.req.env.GIT_MESSAGE }}"
+      run: echo "${{ steps.req.outputs.GIT_MESSAGE }}"
