@@ -22,5 +22,5 @@ jobs:
             echo "GIT_MESSAGE=$(jq -r '.message' $HOME/res.json)" >> $GITHUB_ENV
       id: req
     - run: echo "${{ steps.req.GIT_MESSAGE }}"
-    - if: ${{ steps.req.GIT_MESSAGE }}
+    - if: ${{ steps.req.GIT_MESSAGE }} == ''
       run: echo "OK!"
