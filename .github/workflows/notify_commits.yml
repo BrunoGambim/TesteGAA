@@ -21,6 +21,6 @@ jobs:
             -d '{"ref":"bump/update-jarbas-commons","inputs":{"commit":"${{ github.sha }}"}}' > $HOME/res.json
             echo "GIT_MESSAGE=$(jq -r '.message' $HOME/res.json)" >> $GITHUB_ENV
       id: req
-    - run: echo "${{ steps.req.GIT_MESSAGE }}"
+    - run: echo "${{ steps.req }}"
     - if: ${{ steps.req.GIT_MESSAGE }} == ''
       run: echo "${{ steps.req.GIT_MESSAGE }}"
