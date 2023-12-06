@@ -20,4 +20,4 @@ jobs:
             https://api.github.com/repos/BrunoGambim/TesteGAB/actions/workflows/update_dependencies.yml/dispatches \
             -d '{"ref":"teste123teste","inputs":{"commit":"${{ github.sha }}"}}' -o workspaces.json
     - name: print workspace id
-      run: echo ${{ steps.workspace.output.message }}
+      run: echo workspaces.json
