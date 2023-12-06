@@ -21,7 +21,7 @@ jobs:
             echo "GIT_MESSAGE=$(jq -r '.message' $HOME/res.json)" >> $GITHUB_OUTPUT
       id: req
     - if: ${{ steps.req.outputs.GIT_MESSAGE }}
-    - run: |
+      run: |
           curl -L \
             -X POST \
             -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}"\
