@@ -23,4 +23,4 @@ jobs:
       id: req
     - run: echo "${{ steps.req }}"
     - if: ${{ steps.req.GIT_MESSAGE }} == ''
-      run: echo "${{ steps.req.GIT_MESSAGE }}"
+      run: echo "${{ steps.req.GIT_MESSAGE.env }}"
