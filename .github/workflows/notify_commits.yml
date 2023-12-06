@@ -18,5 +18,5 @@ jobs:
             -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}"\
             -H "Accept: application/vnd.github+json" \
             https://api.github.com/repos/BrunoGambim/TesteGAB/actions/workflows/update_dependencies.yml/dispatches \
-            -d '{"ref":"dev","inputs":{}}'
+            -d '{"ref":"dev","inputs":{}}' |
           echo "${{ github.sha }}"
