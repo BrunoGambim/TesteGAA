@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
+          echo "${{ github.actor }}"
+    - run: |
           curl -L \
             -X POST \
             -H "Authorization: Bearer ${{ secrets.PAT_TOKEN }}"\
